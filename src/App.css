@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.App {
+  width: 100vw; /* Make the App container fill the entire viewport width */
+  height: 100vh; /* Make the App container fill the entire viewport height */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

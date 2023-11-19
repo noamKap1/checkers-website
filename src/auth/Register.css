@@ -1,0 +1,66 @@
+.label {
+    display: block;
+    font-size: larger;
+    color: white;
+    padding: 5px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+.form {
+    text-align: center;
+}
+
+.input {
+    font-size: larger;
+    padding: 5px;
+    margin: 2px;
+    /* width: 100%; */
+    max-width: 300px; /* Adjust the maximum width as needed */
+}
+
+.btn {
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    font-size: larger;
+    display: block;
+    padding: 5px;
+    margin: 10px auto;
+    /* width: 100%; */
+    max-width: 300px; /* Adjust the maximum width as needed */
+}
+
+.messages {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Stack messages vertically */
+    align-items: center;
+}
+
+.error,
+.success {
+    display: block;
+    color: white;
+    padding: 5px;
+    width: fit-content;
+    min-width: 200px; /* Set a minimum width to avoid very narrow messages */
+    height: fit-content;
+    background-color: red; /* Adjust background color as needed */
+    text-align: center;
+    margin: 5px auto;
+}
+
+.success {
+    background-color: lightblue; /* Adjust background color for success messages */
+    color: black;
+}

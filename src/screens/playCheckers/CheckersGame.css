@@ -1,0 +1,85 @@
+.checkers-wrapper{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.checkers-board {
+    position: relative;
+    background: #fff;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.checkers-field-dark{
+    /* width: 12.5%;
+    height: 12.5%; */
+    background: #345;
+    position: absolute;
+}
+.checkers-field-light{
+    /* width: 12.5%;
+    height: 12.5%; */
+    background: #eef;
+    position: absolute;
+}
+.checkers-field-highlight{
+    background: gold;
+}
+.checkers-piece-dark {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    cursor: pointer;
+    background:  red;
+    border-radius: 100%;
+}
+.checkers-piece-light {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    cursor: pointer;
+    left: 10%;
+    background:  blue;
+    border-radius: 100%;
+}
+.checkers-piece-crowned::before {
+    content: "\2655"; /* Unicode character for a crown (you can use a different one) */
+    font-size: 30px; /* Adjust the size of the crown icon as needed */
+    position: relative;
+
+    color: white !important;
+    z-index: 1; /* Ensure the crown is above the chess piece */
+}
+.checkers--player_DARK .checkers-piece-dark {
+    top: calc(10% - 1px);
+    left: calc(10% - 1px);
+    cursor: pointer;
+    border: 2px solid #000
+}
+.checkers--player_DARK .checkers-piece-dark:hover {
+    border: 2px solid gold;
+}
+
+.checkers--player_LIGHT .checkers-piece-light {
+    top: calc(10% - 1px);
+    left: calc(10% - 1px);
+    cursor: pointer;
+    border: 2px solid #000
+}
+
+.checkers--player_LIGHT .checkers-piece-light:hover {
+    border: 2px solid gold;
+}
+
+.checkers-piece-selected {
+    background: gold;
+    border: 2px solid gold !important
+    
+}
+
