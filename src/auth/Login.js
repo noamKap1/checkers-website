@@ -33,7 +33,9 @@ const Login = () => {
             setError('Google Sign-In failed. Please try again.'); // Set the error message
         }
     };
-
+    const handleRegisterClick = () => {
+        navigate('/register');
+      };
     return (
         <div className="login-container">
             {error && <p className="error-message">{error}</p>} {/* Display error message if error is set */}
@@ -45,7 +47,14 @@ const Login = () => {
                     Sign In With Google
                 </button>
             </div> */}
-            <p>Don't have an account? <a href="/register">Register</a>.</p>
+            <p>
+                Don't have an account? <span
+                onClick={handleRegisterClick}
+                style={{ color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}
+                >
+                Register
+                </span>.
+            </p>
         </div>
     );
 };
