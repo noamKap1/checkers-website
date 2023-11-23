@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { auth, googleProvider } from '../config/firebase';
 import { signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import welcomePic from './welcome.png'
+
 import './Login.css'; // Import the CSS file
 
 const Login = () => {
@@ -37,7 +39,9 @@ const Login = () => {
         navigate('/register');
       };
     return (
-        <div className="login-container">
+        <div>
+            <img className="welcome-pic" src={welcomePic} alt="Welcome Picture" />
+            <div className="login-container">
             {error && <p className="error-message">{error}</p>} {/* Display error message if error is set */}
             <input placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
             <input placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
@@ -55,6 +59,7 @@ const Login = () => {
                 Register
                 </span>.
             </p>
+        </div>
         </div>
     );
 };

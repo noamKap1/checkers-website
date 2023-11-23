@@ -7,14 +7,18 @@ body {
     height: 100vh;
     margin: 0;
 }
-
+.welcome-pic{
+    height: 300px;
+    width: 600px;
+}
 .login-container {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
+    z-index: 1;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    width: 400px; /* Make sure the container occupies the full width */
+    width: 600px; /* Make sure the container occupies the full width */
      /* Limit the maximum width for a better fit */
 }
 

@@ -1,6 +1,6 @@
 import './App.css';
 import Login from "./auth/Login";
-import AdsComponent from './AdsComponent';
+import AdsComponent from './ads/AdsComponent';
 
 function App() {
   return (
