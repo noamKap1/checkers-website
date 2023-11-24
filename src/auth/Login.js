@@ -3,6 +3,7 @@ import { auth, googleProvider } from '../config/firebase';
 import { signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import welcomePic from './welcome.png'
+import AdsComponent from '../ads/AdsComponent';
 
 import './Login.css'; // Import the CSS file
 
@@ -40,6 +41,7 @@ const Login = () => {
       };
     return (
         <div>
+            <AdsComponent dataAdSlot='8146813325679288' />
             <img className="welcome-pic" src={welcomePic} alt="Welcome Picture" />
             <div className="login-container">
             {error && <p className="error-message">{error}</p>} {/* Display error message if error is set */}

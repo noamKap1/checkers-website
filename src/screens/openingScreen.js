@@ -6,6 +6,7 @@ import checkers from './checkers.jpg'
 import backgammon from './backgammon.jpg'
 import './openingScreen.css'; 
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import AdsComponent from '../ads/AdsComponent';
 
 const OpeningScreen = () => {
   const navigate = useNavigate();
@@ -63,6 +64,8 @@ const playCheckers = () => {
 };
 
   return (
+    <div>
+      <AdsComponent dataAdSlot='8146813325679288' />
     <div className="page-container">
       <span className="header">
         <div className="user-info">
@@ -88,6 +91,7 @@ const playCheckers = () => {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import './sendMessage.css'; // Import the CSS file
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import { collection, addDoc, deleteDoc, doc, getDocs, query, where, onSnapshot } from 'firebase/firestore';
+import AdsComponent from '../ads/AdsComponent';
 
 const SendMessage = () => {
   const navigate = useNavigate();
@@ -232,25 +233,29 @@ const handleEmail = async (e) => {
 };
 
   return (
-    <div className="page-container">
-    <span className="header">
-        <div className="user-info">
-            <img className="profile-pic" src={profilePic} alt="Profile Picture" />
-            <p className="user-email">{userEmail}</p>
-        </div>
-        <button className="button-logout" onClick={logOut}>Log Out</button>
-    </span>
-      <div className="white">Enter the same room id as your friend and his correct email to begin the match.</div>
-    <span>
-        <input placeholder='Room id' value={message} onChange={handleRoomId}></input>
-    </span>
-    <span>
-        <input placeholder='Reciever email' value={recEmail} onChange={handleEmail} type="email"></input>
-    </span>
-    <span>
-        <button onClick={uploadMessage} disabled={isButtonDisabled} id="custom-button">        {isButtonDisabled ? 'You are ready' : 'You are not ready'}
+    <div>
+          <AdsComponent dataAdSlot='8146813325679288' />
+
+<div className="page-container">
+<span className="header">
+    <div className="user-info">
+        <img className="profile-pic" src={profilePic} alt="Profile Picture" />
+        <p className="user-email">{userEmail}</p>
+    </div>
+    <button className="button-logout" onClick={logOut}>Log Out</button>
+</span>
+  <div className="white">Enter the same room id as your friend and his correct email to begin the match.</div>
+<span>
+    <input placeholder='Room id' value={message} onChange={handleRoomId}></input>
+</span>
+<span>
+    <input placeholder='Reciever email' value={recEmail} onChange={handleEmail} type="email"></input>
+</span>
+<span>
+    <button onClick={uploadMessage} disabled={isButtonDisabled} id="custom-button">        {isButtonDisabled ? 'You are ready' : 'You are not ready'}
 </button>
-    </span>
+</span>
+</div>
     </div>
   );
 };
