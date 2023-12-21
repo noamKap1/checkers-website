@@ -5,7 +5,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import './sendMessage.css'; // Import the CSS file
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import { collection, addDoc, deleteDoc, doc, getDocs, query, where, onSnapshot } from 'firebase/firestore';
-import AdsComponent from '../ads/AdsComponent';
 
 const SendMessage = () => {
   const navigate = useNavigate();
@@ -234,7 +233,6 @@ const handleEmail = async (e) => {
 
   return (
     <div>
-          <AdsComponent dataAdSlot='8146813325679288' />
 
 <div className="page-container">
 <span className="header">

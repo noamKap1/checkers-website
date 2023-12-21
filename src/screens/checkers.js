@@ -5,7 +5,6 @@ import { signOut } from 'firebase/auth'
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import CheckersGame from './playCheckers/ChekcersGame';
-import AdsComponent from '../ads/AdsComponent';
 
 const Checkers = () => {
   const navigate = useNavigate();
@@ -76,7 +75,6 @@ const Checkers = () => {
 
   return (
 <div>
-<AdsComponent dataAdSlot='8146813325679288' />
     <div className="page-container">
       <span className="header">
         <div className="user-info">

@@ -7,7 +7,6 @@ import { uploadBytes, uploadString } from 'firebase/storage';
 import profilePic from './profile.jpg'
 import { collection, addDoc } from "firebase/firestore"; 
 import { getStorage, ref } from "firebase/storage";
-import AdsComponent from '../ads/AdsComponent';
 
 
 
@@ -133,7 +132,6 @@ export default function Register() {
 
     return (
         <div>
-            <AdsComponent dataAdSlot='8146813325679288' />
         <div className="form">
             <div>
                 <h1>User Registration</h1>
